@@ -19,7 +19,7 @@ class ImageCardCard @JvmOverloads constructor(
     }
 
     override fun render(rendering: ImageCardRendering) {
-
+        // not implemented
     }
 
 }
