@@ -5,6 +5,7 @@ import com.squareup.contour.ContourLayout
 import com.squareup.contour.LayoutContainer
 import com.squareup.contour.XInt
 import com.squareup.contour.YInt
+import com.tinder.contourfun.contour.AxesSolver
 import java.util.Collections
 import kotlin.math.pow
 

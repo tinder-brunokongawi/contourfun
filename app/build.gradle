@@ -1,11 +1,26 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'com.jfrog.artifactory'
+}
+
+repositories {
+    maven { url 'https://mvn.jwplayer.com/content/repositories/releases/' }
+    maven { url 'http://repo.brightcove.com/releases' }
+    maven {
+        url 'https://tinder.jfrog.io/tinder/libs'
+        credentials {
+            username = "bruno.kongawi@gotinder.com"
+            password = "AKCp5fU4KjX7TY2zf3u3YUpUDLEsDiX67cngtmwfAx5EHDN6BZgLUr7MHUhRfQebFzvB4edXH"
+        }
+    }
 }
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.tinder.contourfun"
@@ -45,4 +60,9 @@ dependencies {
 
     implementation "app.cash.contour:contour:1.0.0"
     implementation "io.coil-kt:coil:1.1.0"
+    implementation('com.tinder.video:video:0.0.8@aar') {
+        transitive = true
+    }
+    implementation "com.tinder.recs:cardstack:1.7.0@aar"
+    implementation"androidx.cardview:cardview:1.0.0"
 }

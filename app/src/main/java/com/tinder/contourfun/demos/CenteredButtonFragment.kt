@@ -23,7 +23,7 @@ class CenteredButtonFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     class CenteredButton(context: Context): ContourLayout(context) {
         init {
-            background = PaintDrawable(COLORS[0])
+            background = PaintDrawable(COLORS[1])
             Button(context).apply {
                 text = "I AM A CENTERED BUTTON"
                 layoutBy(

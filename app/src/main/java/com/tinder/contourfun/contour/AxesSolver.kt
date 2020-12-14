@@ -1,4 +1,4 @@
-package com.tinder.contourfun.quadpanel
+package com.tinder.contourfun.contour
 
 import com.squareup.contour.solvers.XAxisSolver
 import com.squareup.contour.solvers.YAxisSolver

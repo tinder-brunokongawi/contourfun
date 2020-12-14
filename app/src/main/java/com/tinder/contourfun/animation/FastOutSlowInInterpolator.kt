@@ -1,4 +1,4 @@
-package com.tinder.contourfun.quadpanel
+package com.tinder.contourfun.animation
 
 import android.view.animation.Interpolator
 import kotlin.math.min
