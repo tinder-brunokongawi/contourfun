@@ -12,7 +12,7 @@ repositories {
     maven {
         url 'https://tinder.jfrog.io/tinder/libs'
         credentials {
-            username = "<someone@gotinder>"
+            username = "<someone@gotinder.com>"
             password = "<mytoken>"
         }
     }
