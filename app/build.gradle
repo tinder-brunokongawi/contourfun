@@ -12,8 +12,8 @@ repositories {
     maven {
         url 'https://tinder.jfrog.io/tinder/libs'
         credentials {
-            username = "bruno.kongawi@gotinder.com"
-            password = "AKCp5fU4KjX7TY2zf3u3YUpUDLEsDiX67cngtmwfAx5EHDN6BZgLUr7MHUhRfQebFzvB4edXH"
+            username = "<someone@gotinder>"
+            password = "<mytoken>"
         }
     }
 }

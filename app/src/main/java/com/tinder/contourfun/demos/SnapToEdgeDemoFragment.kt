@@ -7,6 +7,7 @@ import android.transition.ChangeBounds
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.OvershootInterpolator
 import android.widget.Button
 import android.widget.ImageView
 import androidx.core.view.doOnAttach
@@ -85,7 +86,7 @@ class SnapToEdgeDemoFragment : Fragment() {
                     TransitionManager.beginDelayedTransition(
                         this@SnapToEdgeDemo,
                         ChangeBounds()
-                            .setInterpolator(FastOutSlowInInterpolator())
+                            .setInterpolator(OvershootInterpolator(1F))
                             .setDuration(BaseQuadPanel.TRANSITION_ANIMATION_DURATION)
                     )
                     when (index) {
