@@ -1,7 +1,6 @@
 # contourfun
 A Demo app testing building UI with Contour
 
-| Left-aligned | Center-aligned | Right-aligned |
+| Rocket Launch | Video conference like Panel | Right-aligned |
 | :---         |     :---:      |          ---: |
-| ![](demo/rocket_demo.gif)   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| ![](demo/rocket_demo.gif)   | ![](demo/video_panel_demo.gif)     | git status    |
