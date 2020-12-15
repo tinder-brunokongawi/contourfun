@@ -8,6 +8,7 @@ import com.tinder.contourfun.DEFAULT_BACKGROUND_COLOR
 import com.tinder.contourfun.quadpanel.BaseCard
 import com.tinder.contourfun.rendering.ImageCardRendering
 
+// unused
 class ImageCardCard @JvmOverloads constructor(
     context: Context,
     backgroundColor: Int = DEFAULT_BACKGROUND_COLOR,
@@ -17,8 +18,8 @@ class ImageCardCard @JvmOverloads constructor(
     private val imageView by lazy {
         ImageView(context).apply {
             layoutBy(
-                x = leftTo { parent.left() }.rightTo { parent.right() },
-                y = topTo { parent.top() }.bottomTo { parent.bottom() }
+                x = matchParentX(),
+                y = matchParentY()
             )
         }
     }

@@ -21,10 +21,10 @@ import com.tinder.contourfun.quadpanel.BaseQuadPanel
 class RocketLaunchView(context: Context) : ContourLayout(context) {
 
     companion object {
-        private const val margin = 24
-        private const val rocketSize = 60
-        private const val rocketElevation = 10F
-        private const val flameSize = 50
+        private const val MARGIN = 24
+        private const val ROCKET_SIZE = 60
+        private const val ROCKET_ELEVATION = 10F
+        private const val FLAME_SIZE = 50
         private val buttonEmojiTexts = listOf(
             "\uD83D\uDC46\uD83C\uDFFE",
             "\uD83D\uDC49\uD83C\uDFFE",
@@ -38,7 +38,7 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
             (it as ImageView).load(R.drawable.rocket) {
                 crossfade(true)
             }
-            it.elevation = rocketElevation
+            it.elevation = ROCKET_ELEVATION
         }
     }
 
@@ -49,27 +49,27 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
             }
         }
         layoutBy(
-            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { flameSize.xdip },
-            y = centerVerticallyTo { rocketView.centerY() }.heightOf { flameSize.ydip }
+            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { FLAME_SIZE.xdip },
+            y = centerVerticallyTo { rocketView.centerY() }.heightOf { FLAME_SIZE.ydip }
         )
     }
 
     private val buttonAxesSolvers = listOf(
         AxesSolver(
-            centerHorizontallyTo { parent.centerX() }.widthOf { rocketSize.xdip },
-            topTo { parent.top() + margin.ydip }.heightOf { rocketSize.ydip }
+            centerHorizontallyTo { parent.centerX() }.widthOf { ROCKET_SIZE.xdip },
+            topTo { parent.top() + MARGIN.ydip }.heightOf { ROCKET_SIZE.ydip }
         ),
         AxesSolver(
-            rightTo { parent.right() - margin.xdip }.widthOf { rocketSize.xdip },
-            centerVerticallyTo { parent.centerY() }.heightOf { rocketSize.ydip }
+            rightTo { parent.right() - MARGIN.xdip }.widthOf { ROCKET_SIZE.xdip },
+            centerVerticallyTo { parent.centerY() }.heightOf { ROCKET_SIZE.ydip }
         ),
         AxesSolver(
-            centerHorizontallyTo { parent.centerX() }.widthOf { rocketSize.xdip },
-            bottomTo { parent.bottom() - margin.ydip }.heightOf { rocketSize.ydip }
+            centerHorizontallyTo { parent.centerX() }.widthOf { ROCKET_SIZE.xdip },
+            bottomTo { parent.bottom() - MARGIN.ydip }.heightOf { ROCKET_SIZE.ydip }
         ),
         AxesSolver(
-            leftTo { parent.left() + margin.xdip }.widthOf { rocketSize.xdip },
-            centerVerticallyTo { parent.centerY() }.heightOf { rocketSize.ydip }
+            leftTo { parent.left() + MARGIN.xdip }.widthOf { ROCKET_SIZE.xdip },
+            centerVerticallyTo { parent.centerY() }.heightOf { ROCKET_SIZE.ydip }
         )
     )
 
@@ -97,8 +97,8 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
                                 override fun onTransitionEnd(transition: Transition) {
                                     flameImageView.visibility = View.INVISIBLE
                                     flameImageView.updateLayoutBy(
-                                        x = centerHorizontallyTo { rocketView.centerX() }.widthOf { flameSize.xdip },
-                                        y = centerVerticallyTo { rocketView.centerY() }.heightOf { flameSize.ydip }
+                                        x = centerHorizontallyTo { rocketView.centerX() }.widthOf { FLAME_SIZE.xdip },
+                                        y = centerVerticallyTo { rocketView.centerY() }.heightOf { FLAME_SIZE.ydip }
                                     )
                                 }
 
@@ -121,32 +121,32 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
                         rocketView.rotation = 0F
                         flameImageView.rotation = 0F
                         flameImageView.updateLayoutBy(
-                            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { flameSize.xdip },
-                            y = topTo { rocketView.bottom() }.heightOf { flameSize.ydip }
+                            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { FLAME_SIZE.xdip },
+                            y = topTo { rocketView.bottom() }.heightOf { FLAME_SIZE.ydip }
                         )
                     }
                     1 -> {
                         rocketView.rotation = 90F
                         flameImageView.rotation = 90F
                         flameImageView.updateLayoutBy(
-                            x = rightTo { rocketView.left() }.widthOf { flameSize.xdip },
-                            y = centerVerticallyTo { rocketView.centerY() }.heightOf { flameSize.ydip }
+                            x = rightTo { rocketView.left() }.widthOf { FLAME_SIZE.xdip },
+                            y = centerVerticallyTo { rocketView.centerY() }.heightOf { FLAME_SIZE.ydip }
                         )
                     }
                     2 -> {
                         rocketView.rotation = 180F
                         flameImageView.rotation = 180F
                         flameImageView.updateLayoutBy(
-                            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { flameSize.xdip },
-                            y = bottomTo { rocketView.top() }.heightOf { flameSize.ydip }
+                            x = centerHorizontallyTo { rocketView.centerX() }.widthOf { FLAME_SIZE.xdip },
+                            y = bottomTo { rocketView.top() }.heightOf { FLAME_SIZE.ydip }
                         )
                     }
                     3 -> {
                         rocketView.rotation = 270F
                         flameImageView.rotation = 270F
                         flameImageView.updateLayoutBy(
-                            x = leftTo { rocketView.right() }.widthOf { flameSize.xdip },
-                            y = centerVerticallyTo { rocketView.centerY() }.heightOf { flameSize.ydip }
+                            x = leftTo { rocketView.right() }.widthOf { FLAME_SIZE.xdip },
+                            y = centerVerticallyTo { rocketView.centerY() }.heightOf { FLAME_SIZE.ydip }
                         )
                     }
                 }
@@ -157,8 +157,8 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
             }
         }
         rocketView.layoutBy(
-            x = centerHorizontallyTo { parent.centerX() }.widthOf { rocketSize.xdip },
-            y = centerVerticallyTo { parent.centerY() }.heightOf { rocketSize.ydip }
+            x = centerHorizontallyTo { parent.centerX() }.widthOf { ROCKET_SIZE.xdip },
+            y = centerVerticallyTo { parent.centerY() }.heightOf { ROCKET_SIZE.ydip }
         )
     }
 }

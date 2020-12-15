@@ -14,6 +14,11 @@ import com.tinder.contourfun.COLORS
 /* simple demo */
 class CenteredButtonFragment : Fragment() {
 
+    companion object {
+        const val BUTTON_WIDTH = 174
+        const val BUTTON_HEIGHT = 54
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,8 +32,8 @@ class CenteredButtonFragment : Fragment() {
             Button(context).apply {
                 text = "I AM A CENTERED BUTTON"
                 layoutBy(
-                    x = centerHorizontallyTo { parent.centerX() }.widthOf { 174.xdip },
-                    y = centerVerticallyTo { parent.centerY() }.heightOf { 54.ydip }
+                    x = centerHorizontallyTo { parent.centerX() }.widthOf { BUTTON_WIDTH.xdip },
+                    y = centerVerticallyTo { parent.centerY() }.heightOf { BUTTON_HEIGHT.ydip }
                 )
             }
         }

@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
                     .addToBackStack(null)
                     .commit()
             }),
-            Pair(RocketLaunchDemoFragment::class.simpleName.toString(), {
+            Pair(RocketLaunchFragment::class.simpleName.toString(), {
                 supportFragmentManager.beginTransaction()
-                    .add(android.R.id.content, RocketLaunchDemoFragment())
+                    .add(android.R.id.content, RocketLaunchFragment())
                     .addToBackStack(null)
                     .commit()
             }),
@@ -41,6 +41,12 @@ class MainActivity : AppCompatActivity() {
                     .addToBackStack(null)
                     .commit()
 
+            }),
+            Pair(HotTakeFragment::class.simpleName.toString(), {
+                supportFragmentManager.beginTransaction()
+                    .add(android.R.id.content, HotTakeFragment())
+                    .addToBackStack(null)
+                    .commit()
             }),
             Pair(SwipePartyFragment::class.simpleName.toString(), {
                 supportFragmentManager.beginTransaction()
