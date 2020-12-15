@@ -10,7 +10,7 @@ import com.tinder.contourfun.DEFAULT_BACKGROUND_COLOR
 import com.tinder.contourfun.card.VideoCard
 import com.tinder.contourfun.quadpanel.BaseCard
 import com.tinder.contourfun.quadpanel.BaseQuadPanel
-import com.tinder.contourfun.quadpanel.PHI
+import com.tinder.contourfun.PHI
 import com.tinder.contourfun.rendering.CardRendering
 import kotlin.math.pow
 
@@ -22,8 +22,9 @@ class WonderPanel(context: Context) : BaseQuadPanel<CardRendering>(context) {
     }
 
     init {
-        setBackgroundColor(DEFAULT_BACKGROUND_COLOR)
         contourHeightMatchParent()
+        contourWidthMatchParent()
+        setBackgroundColor(DEFAULT_BACKGROUND_COLOR)
     }
 
     override fun createCard(index: Int): BaseCard<CardRendering> {

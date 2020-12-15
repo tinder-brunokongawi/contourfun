@@ -23,6 +23,7 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
     companion object {
         private const val margin = 24
         private const val rocketSize = 60
+        private const val rocketElevation = 10F
         private const val flameSize = 50
         private val buttonEmojiTexts = listOf(
             "\uD83D\uDC46\uD83C\uDFFE",
@@ -37,6 +38,7 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
             (it as ImageView).load(R.drawable.rocket) {
                 crossfade(true)
             }
+            it.elevation = rocketElevation
         }
     }
 
@@ -152,7 +154,6 @@ class RocketLaunchView(context: Context) : ContourLayout(context) {
                     buttonAxesSolvers[x].x,
                     buttonAxesSolvers[x].y
                 )
-                it.isVisible = false
             }
         }
         rocketView.layoutBy(

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tinder.contourfun.quadwonderpanel.WonderPanel
 
+/* only for demo */
 class WonderPanelFragment : Fragment() {
 
     override fun onCreateView(

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tinder.contourfun.swipeparty.SwipePartyPanel
 
+/* only for demo */
 class SwipePartyFragment: Fragment() {
 
     override fun onCreateView(

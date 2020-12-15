@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tinder.contourfun.rocketlaunch.RocketLaunchView
 
+/* demo only */
 class RocketLaunchDemoFragment : Fragment() {
 
     override fun onCreateView(

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tinder.contourfun.videoconference.VideoPanel
 
+/* demo only */
 class VideoPanelFragment : Fragment() {
 
     override fun onCreateView(
