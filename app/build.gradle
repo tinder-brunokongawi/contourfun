@@ -3,19 +3,12 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-    id 'com.jfrog.artifactory'
 }
 
 repositories {
     maven { url 'https://mvn.jwplayer.com/content/repositories/releases/' }
     maven { url 'http://repo.brightcove.com/releases' }
-    maven {
-        url 'https://tinder.jfrog.io/tinder/libs'
-        credentials {
-            username = "<someone@gotinder.com>"
-            password = "<mytoken>"
-        }
-    }
+    maven {url 'https://tinder.jfrog.io/tinder/libs'}
 }
 
 android {

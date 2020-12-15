@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
                     .addToBackStack(null)
                     .commit()
             }),
-            Pair(SnapToEdgeDemoFragment::class.simpleName.toString(), {
+            Pair(RocketLaunchDemoFragment::class.simpleName.toString(), {
                 supportFragmentManager.beginTransaction()
-                    .add(android.R.id.content, SnapToEdgeDemoFragment())
+                    .add(android.R.id.content, RocketLaunchDemoFragment())
                     .addToBackStack(null)
                     .commit()
             }),
