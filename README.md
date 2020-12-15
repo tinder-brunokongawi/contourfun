@@ -1,5 +1,5 @@
 # contourfun
-A Demo app testing building UI with Contour
+A Demo app testing building UI with [Contour](https://github.com/cashapp/contour)
 
 | Rocket Launch | Video conference like Panel | Wonder Swipe |
 | :---         |     :---:      |          ---: |
