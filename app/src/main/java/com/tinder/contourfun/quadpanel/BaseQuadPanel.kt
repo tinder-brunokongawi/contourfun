@@ -85,6 +85,7 @@ abstract class BaseQuadPanel<T>(context: Context) : ContourLayout(context) {
 
     abstract fun focusOn(index: Int)
 
+    // for rendering/updating
     fun render(renderings: List<T>) {
         for (x in 0 until MAX_NUM_CARD) {
             if (renderings.size > x) {

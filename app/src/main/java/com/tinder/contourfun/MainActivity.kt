@@ -48,12 +48,6 @@ class MainActivity : AppCompatActivity() {
                     .add(android.R.id.content, HotTakeFragment())
                     .addToBackStack(null)
                     .commit()
-            }),
-            Pair(SwipePartyFragment::class.simpleName.toString(), {
-                supportFragmentManager.beginTransaction()
-                    .add(android.R.id.content, SwipePartyFragment())
-                    .addToBackStack(null)
-                    .commit()
             })
         )
     }

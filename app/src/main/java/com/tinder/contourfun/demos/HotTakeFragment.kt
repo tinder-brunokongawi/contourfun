@@ -15,7 +15,7 @@ class HotTakeFragment: Fragment() {
     ): HotTakeView {
         val hotTakeView = HotTakeView(requireContext())
         hotTakeView.onClose = {
-            //
+            // close
         }
         return hotTakeView
     }

@@ -13,7 +13,8 @@ import kotlin.math.pow
 class HotTakeView(context: Context): ContourLayout(context) {
 
     companion object {
-        val GRADIENT_COLORS = intArrayOf(0xFFF05CFC.toInt(), 0xFF6A82FB.toInt())
+        private val GRADIENT_COLORS = intArrayOf(0xFFF05CFC.toInt(), 0xFF6A82FB.toInt())
+        private const val CLOSE_BUTTON_PADDING =  36
     }
 
     private val selectionCard = SelectionCard(context)
@@ -25,7 +26,7 @@ class HotTakeView(context: Context): ContourLayout(context) {
         background = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, GRADIENT_COLORS)
         ImageView(context).apply {
             setImageResource(R.drawable.ic_close)
-            updatePadding(top = 36.dip, right = 36.dip)
+            updatePadding(top = CLOSE_BUTTON_PADDING.dip, right = CLOSE_BUTTON_PADDING.dip)
             layoutBy(
                 x = rightTo { parent.right() },
                 y = topTo { parent.top() }
@@ -36,10 +37,10 @@ class HotTakeView(context: Context): ContourLayout(context) {
         }
         selectionCard.layoutBy(
             x = centerHorizontallyTo { parent.centerX() }.widthOf {
-                (width * PHI + (width * PHI.pow(3)) / 2).toInt().toXInt()
+                (width * PHI + (width * PHI.pow(2)) / 2).toInt().toXInt()
             },
             y = centerVerticallyTo {
-                parent.centerY() - (height * PHI.pow(7)).toInt().toYInt()
+                parent.centerY() - (height * PHI.pow(9)).toInt().toYInt()
             }.heightOf {
                 (height * PHI + height * PHI.pow(5)).toInt().toYInt()
             }

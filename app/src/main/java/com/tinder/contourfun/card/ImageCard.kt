@@ -12,7 +12,7 @@ import com.tinder.contourfun.rendering.ImageCardRendering
 class ImageCardCard @JvmOverloads constructor(
     context: Context,
     backgroundColor: Int = DEFAULT_BACKGROUND_COLOR,
-    roundedCorner: Float = 0.0F
+    roundedCorner: Float = 0F
 ) : BaseCard<ImageCardRendering>(context) {
 
     private val imageView by lazy {
@@ -28,7 +28,7 @@ class ImageCardCard @JvmOverloads constructor(
         contourHeightMatchParent()
         contourWidthMatchParent()
         background = PaintDrawable(backgroundColor).also {
-            if (roundedCorner > 0.0F) it.setCornerRadius(roundedCorner)
+            if (roundedCorner > 0F) it.setCornerRadius(roundedCorner)
         }
     }
 

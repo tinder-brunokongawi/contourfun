@@ -13,10 +13,11 @@ import com.tinder.contourfun.rendering.VideoCardRendering
 import com.tinder.video.TinderPlayerView
 import com.tinder.video.TinderVideoPlayer
 
+/* demo only */
 class VideoCard @JvmOverloads constructor(
     context: Context,
     backgroundColor: Int = DEFAULT_BACKGROUND_COLOR,
-    roundedCorner: Float = 0.0F
+    roundedCorner: Float = 0F
 ) : BaseCard<CardRendering>(context) {
 
     private val playerView by lazy {
@@ -47,14 +48,14 @@ class VideoCard @JvmOverloads constructor(
         contourHeightMatchParent()
         contourWidthMatchParent()
         background = PaintDrawable(backgroundColor).also {
-            if (roundedCorner > 0.0F) it.setCornerRadius(roundedCorner)
+            if (roundedCorner > 0F) it.setCornerRadius(roundedCorner)
         }
     }
 
     override fun render(rendering: CardRendering) {
         when (rendering) {
             is HiddenFaceRendering -> {
-                imageView.load(rendering.url){
+                imageView.load(rendering.url) {
                     crossfade(true)
                     scale(Scale.FILL)
                 }

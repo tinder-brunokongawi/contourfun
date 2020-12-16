@@ -9,10 +9,10 @@ import com.tinder.contourfun.util.distinctObservable
 class DemoListLayout(context: Context) : ContourLayout(context) {
 
     companion object {
-        const val BUTTON_WIDTH = 260
-        const val BUTTON_HEIGHT = 48
-        const val TOP_MARGIN = 100
-        const val BUTTON_MARGIN = 24
+        private const val BUTTON_WIDTH = 260
+        private const val BUTTON_HEIGHT = 48
+        private const val TOP_MARGIN = 100
+        private const val BUTTON_MARGIN = 24
     }
 
     var buttonActions by distinctObservable(mutableListOf<Pair<String, () -> Unit>>()) {
