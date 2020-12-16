@@ -6,6 +6,7 @@ import android.graphics.Typeface
 import android.graphics.drawable.PaintDrawable
 import android.view.Gravity
 import android.widget.TextView
+import androidx.core.view.updatePadding
 import com.squareup.contour.ContourLayout
 import com.tinder.contourfun.PHI_2
 
@@ -18,6 +19,9 @@ class SelectionCard @JvmOverloads constructor(
     companion object {
         const val BACKGROUND_COLOR = 0xFF38057C
         const val CORNER_RADIUS = 32F
+        const val ELEVATION = 20F
+        const val HORIZONTAL_PADDING = 16
+        const val VERTICAL_PADDING = 16
     }
 
     private val promptTextView = TextView(context).apply {
@@ -30,6 +34,8 @@ class SelectionCard @JvmOverloads constructor(
 
     init {
         background = PaintDrawable(backgroundColor).also { it.setCornerRadius(cornerRadius) }
+        elevation = ELEVATION.dip
+        updatePadding(left = HORIZONTAL_PADDING.dip, right = HORIZONTAL_PADDING.dip, top = 36.dip)
 
     }
 }

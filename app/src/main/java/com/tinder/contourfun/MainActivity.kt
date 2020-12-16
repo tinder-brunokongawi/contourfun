@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val demoListLayout = DemoListLayout(this)
         setContentView(demoListLayout)
+        // TODO: make concise
         demoListLayout.buttonActions = mutableListOf(
             Pair(CenteredButtonFragment::class.simpleName.toString(), {
                 supportFragmentManager.beginTransaction()
@@ -55,11 +56,5 @@ class MainActivity : AppCompatActivity() {
                     .commit()
             })
         )
-
-    }
-
-
-    private fun startFragment() {
-
     }
 }

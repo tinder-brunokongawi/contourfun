@@ -24,7 +24,6 @@ class VideoPanel(context: Context) : BaseQuadPanel<CardRendering>(context) {
         HiddenFaceRendering("https://ca.slack-edge.com/E9ZDCUQER-W015Z15HGT1-6cca8774c231-512")
     )
 
-
     init {
         contourHeightMatchParent()
         contourWidthMatchParent()
