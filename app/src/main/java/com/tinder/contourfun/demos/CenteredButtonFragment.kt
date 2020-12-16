@@ -1,6 +1,5 @@
 package com.tinder.contourfun.demos
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.PaintDrawable
 import android.os.Bundle
@@ -26,7 +25,6 @@ class CenteredButtonFragment : Fragment() {
         savedInstanceState: Bundle?
     ) = CenteredButton(requireContext())
 
-    @SuppressLint("SetTextI18n")
     class CenteredButton(context: Context): ContourLayout(context) {
         init {
             background = PaintDrawable(COLORS[1])
