@@ -28,7 +28,7 @@ class VideoPanel(context: Context) : BaseQuadPanel<CardRendering>(context) {
         contourHeightMatchParent()
         contourWidthMatchParent()
         setBackgroundColor(DEFAULT_BACKGROUND_COLOR)
-        // render(renderings)
+        render(renderings)
     }
 
     override fun createCard(index: Int): BaseCard<CardRendering> {
